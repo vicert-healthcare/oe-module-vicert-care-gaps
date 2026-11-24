@@ -1,0 +1,43 @@
+{
+    "name": "vicert/oe-module-vicert-care-gaps",
+    "description": "Care Gaps Worklist for OpenEMR: one list of patients overdue for A1C, blood pressure control and colorectal cancer screening.",
+    "type": "openemr-module",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/vicert-healthcare/oe-module-vicert-care-gaps",
+    "support": {
+        "issues": "https://github.com/vicert-healthcare/oe-module-vicert-care-gaps/issues",
+        "source": "https://github.com/vicert-healthcare/oe-module-vicert-care-gaps"
+    },
+    "authors": [
+        {
+            "name": "Vicert",
+            "homepage": "https://vicert.ai"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vicert\\CareGaps\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vicert\\CareGaps\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "openemr": {
+            "type": "custom-module",
+            "directory": "oe-module-vicert-care-gaps"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "keywords": ["openemr", "module", "care gaps", "quality measures", "worklist", "UDS"]
+}

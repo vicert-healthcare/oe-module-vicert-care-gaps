@@ -1,0 +1,35 @@
+/* Care Gaps Worklist: summary cards and gap badges, on top of OpenEMR's Bootstrap theme. */
+.care-gaps .cg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.care-gaps .cg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+.care-gaps .cg-card:hover { background: rgba(0, 0, 0, 0.04); text-decoration: none; }
+.care-gaps .cg-card.active { border-color: #1f6f6b; box-shadow: inset 0 0 0 1px #1f6f6b; }
+.care-gaps .cg-count { font-size: 1.5rem; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.care-gaps .cg-label { font-size: 0.85rem; opacity: 0.8; }
+
+.care-gaps .cg-table td { vertical-align: middle; }
+.care-gaps .cg-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.care-gaps .cg-a1c_overdue { background: #fbf0dc; color: #8a5600; }
+.care-gaps .cg-a1c_poor_control { background: #f8e6e4; color: #a83a32; }
+.care-gaps .cg-bp_uncontrolled { background: #f8e6e4; color: #a83a32; }
+.care-gaps .cg-bp_missing { background: #fbf0dc; color: #8a5600; }
+.care-gaps .cg-crc_screening_due { background: #e8ecf7; color: #3f4f80; }
